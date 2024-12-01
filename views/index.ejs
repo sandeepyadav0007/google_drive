@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDRIVE</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('assets/logo.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand {
+            color: #fff;
+            font-size: 2.5em;
+            text-align: center;
+            width: 100%;
+        }
+        .navbar-brand:hover {
+            color: #ddd;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .btn-custom {
+            padding: 1rem 3rem;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            margin: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-secondary {
+            background-color: #1e82d9;
+            border: none;
+        }
+        .btn-custom:hover {
+            transform: scale(1.05);
+        }
+        .gdrive-logo {
+            display: block;
+            margin: 1rem auto;
+            max-width: 350px;
+            height: auto;
+            border-radius: 10%;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Welcome to GDRIVE</a>
+    </nav>
+    <div class="container hero-section">
+        <div class="row">
+            <div class="col text-center">
+                <a href="user/register" class="btn btn-primary btn-custom">Register</a>
+                <a href="user/login" class="btn btn-secondary btn-custom">Login</a>
+                <img src="assets/gdrive.jpg" alt="GDRIVE Logo" class="gdrive-logo">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 GDRIVE. All rights reserved.</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
