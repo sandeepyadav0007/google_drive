@@ -22,7 +22,7 @@ router.get('/home',authMiddleware, async(req,res)=>{
     const userFiles = await fileModel.find({
         user: req.user.userId
     })
-    console.log(userFiles)
+    // console.log(userFiles)
     res.render('home',{
         files:userFiles
     })

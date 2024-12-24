@@ -48,15 +48,26 @@ router.post('/register' ,
     }
 
     // res.send(errors)
-    console.log(req.body);
-    const {username,email,password} = req.body
-    const hashPassword = await bcrypt.hash(password,10)
-    const newUser = await userModel.create({
-        username ,
-        email,
-        password: hashPassword
-        
-    })
+    // console.log(req.body);
+    try {
+        const { username, email, password } = req.body;
+        const hashPassword = await bcrypt.hash(password, 10);
+        const newUser = await userModel.create({
+            username,
+            email,
+            password: hashPassword
+        });
+        // res.redirect('login');
+    } catch (error) {
+        if (error.code === 11000) {
+            return res.status(400).json({
+                message: 'Username already exists'
+            });
+        }
+        res.status(500).json({
+            message: 'Internal server error'
+        });
+    }
     // res.json(newUser);
     res.redirect('login');
 
